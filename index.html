@@ -8,6 +8,7 @@
         content="Experimental 3D function plotter, using HTML5 and plain JavaScript, without the use of libraries." />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@11.8.0/lib/browser/math.min.js"></script>
 </head>
 
 <body>
@@ -17,6 +18,20 @@
         <canvas id="myCanvas">
             HTML5 Canvas not supported
         </canvas>
+    </div>
+    <div id="controls">
+        <label for="fx">x(t)=</label>
+        <input type="text" id="fx" placeholder="x(t)" value="3*cos(t)" />
+        <label for="fy">y(t)=</label>
+        <input type="text" id="fy" placeholder="y(t)" value="3*sin(t)" />
+        <label for="fz">z(x,y)=</label>
+        <input type="text" id="fz" placeholder="z(x,y)" value="2+sin((x+y)*pi)/2" />
+        <label for="tmin">tmin=</label>
+        <input type="text" id="tmin" placeholder="tmin" value="0"/>
+        <label for="tmax">tmax=</label>
+        <input type="text" id="tmax" placeholder="tmax" value="pi"/>
+    </div>
+    <div id="li_val">
     </div>
     <script src="script.js"></script>
 </body>
